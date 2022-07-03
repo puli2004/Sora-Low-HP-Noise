@@ -1,10 +1,11 @@
 #![feature(concat_idents)]
 #![feature(proc_macro_hygiene)]
-#![feature(asm)]
+#[warn(stable_features)]
 
-mod custom;
 
-#[skyline::main(name = "Replace with the same name as your plugin")]
+mod sora;
+
+#[skyline::main(name = "smashline_test")]
 pub fn main() {
-    custom::install();
+    sora::install();
 }
